@@ -22,7 +22,7 @@ Features
  How to Install and Run Locally
 
 1. Clone the Repository
-git clone https://github.com/Annitha/Auth_system.git
+git clone https://github.com/Annithah/Auth_system.git
 cd Auth_system
 
 2. Install independencies
