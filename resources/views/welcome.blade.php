@@ -6,252 +6,146 @@
     <title>Passinove</title>
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            light: '#9d50bb',
+                            DEFAULT: '#6e48aa',
+                            dark: '#5d3d99',
+                        },
+                        secondary: '#ff9a44',
+                    },
+                }
+            }
+        }
+    </script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+        html {
             scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #f8f9fa;
-            color: #2d3748;
-            line-height: 1.6;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        nav .links a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-
-        nav .links a:hover {
-            background-color: rgba(255,255,255,0.2);
-        }
-
-        nav .auth a {
-            margin-left: 15px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        nav .auth a:first-child {
-            background-color: rgba(255,255,255,0.2);
-        }
-
-        nav .auth a:last-child {
-            background-color: #ff9a44;
-        }
-
-        nav .auth a:hover {
-            transform: translateY(-2px);
-        }
-
-        section {
-            padding: 80px 5%;
-        }
-
-        .welcome {
-            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
-            color: white;
-            text-align: center;
-            padding: 120px 5%;
-        }
-
-        .welcome h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .welcome p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #6e48aa;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, #6e48aa, #9d50bb);
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-
-        .services, .about, .contact {
-            background-color: #fff;
-            margin: 40px auto;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            max-width: 1200px;
-        }
-
-        .services p, .about p {
-            font-size: 1.1rem;
-            color: #4a5568;
-            margin-bottom: 20px;
-        }
-
-        .contact p {
-            font-size: 1.1rem;
-            margin: 15px 0;
-            color: #4a5568;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact p::before {
-            content: '•';
-            color: #9d50bb;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        footer {
-            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        @media screen and (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 15px;
-            }
-            
-            nav .links {
-                margin-top: 15px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav .links a {
-                margin: 5px;
-            }
-            
-            nav .auth {
-                margin-top: 15px;
-            }
-            
-            .welcome h1 {
-                font-size: 2.5rem;
-            }
-            
-            section {
-                padding: 60px 20px;
-            }
-            
-            .services, .about, .contact {
-                padding: 30px 20px;
-            }
         }
     </style>
 </head>
-<body>
+<body class="font-poppins bg-gray-50 text-gray-800 leading-relaxed">
+    <nav class="flex justify-between items-center py-5 px-[5%] bg-gradient-to-r from-primary to-primary-light text-white sticky top-0 z-50 shadow-lg">
+        <div class="links">
+            <a href="#home" class="mx-4 text-white no-underline font-medium transition-all duration-300 py-2 px-3 rounded hover:bg-white hover:bg-opacity-20">Home</a>
+            <a href="#about" class="mx-4 text-white no-underline font-medium transition-all duration-300 py-2 px-3 rounded hover:bg-white hover:bg-opacity-20">About Us</a>
+            <a href="#services" class="mx-4 text-white no-underline font-medium transition-all duration-300 py-2 px-3 rounded hover:bg-white hover:bg-opacity-20">Services</a>
+            <a href="#contact" class="mx-4 text-white no-underline font-medium transition-all duration-300 py-2 px-3 rounded hover:bg-white hover:bg-opacity-20">Contact</a>
+        </div>
+        <div class="auth">
+            @if (Route::has('login'))
+                @auth
+                    
+                @else
+                    <a href="{{ route('login') }}" class="ml-4 text-white no-underline font-medium py-2 px-4 rounded transition-all duration-300 hover:-translate-y-0.5 bg-white bg-opacity-20">Login</a>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 text-white no-underline font-medium py-2 px-4 rounded transition-all duration-300 hover:-translate-y-0.5 bg-secondary">Register</a>
+                    @endif
+                @endauth
+            @endif
+        </div>
+    </nav>
 
-<nav>
-    <div class="links">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <div class="auth">
-        @if (Route::has('login'))
-            @auth
-                <a href="{{ url('/dashboard') }}">Dashboard</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
-        @endif
-    </div>
-</nav>
+    <section id="home" class="bg-gradient-to-r from-primary to-primary-light text-white text-center py-32 px-[5%]">
+        <h1 class="text-5xl font-bold mb-5">Welcome to Passinove</h1>
+        <p class="text-xl max-w-3xl mx-auto">Innovative software solutions for a better tomorrow</p>
+    </section>
 
-<section id="home" class="welcome">
-    <h1>Welcome to Passinove</h1>
-    <p>Innovative software solutions for a better tomorrow</p>
-</section>
+    <section id="about" class="bg-white my-10 rounded-xl py-10 px-10 shadow-lg max-w-6xl mx-auto">
+        <h2 class="text-4xl mb-8 text-center text-primary relative">
+            About Us
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mt-4"></div>
+        </h2>
+        <p class="text-lg text-gray-700 mb-5">
+            Passinove is a tech innovation platform dedicated to creating smart digital solutions that transform business, education, and society.
+        </p>
+    </section>
 
-<section id="about" class="about">
-    <h2 class="section-title">About Us</h2>
-    <p>
-        Passinove is a tech innovation platform dedicated to creating smart digital solutions that transform business, education, and society.
-    </p>
-</section>
+    <section id="services" class="bg-white my-10 rounded-xl py-10 px-10 shadow-lg max-w-6xl mx-auto">
+        <h2 class="text-4xl mb-8 text-center text-primary relative">
+            Our Services
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mt-4"></div>
+        </h2>
+        <p class="text-lg text-gray-700 mb-5">
+            At Passinove, we are committed to delivering a wide range of innovative and impactful services to help organizations and individuals embrace technology more effectively. 
+        </p>
+        <p class="text-lg text-gray-700 mb-5">
+            We specialize in custom software development tailored to the unique needs of each client, ensuring efficient and scalable solutions. 
+            Our team also develops mobile and web applications that are user-friendly, responsive, and designed to solve real-world problems across various industries. 
+        </p>
+        <p class="text-lg text-gray-700 mb-5">
+            In the education sector, we build and maintain powerful school platforms and reporting systems that streamline communication, improve record-keeping, and enhance learning experiences. 
+            Additionally, we offer expert-led tech training and consulting programs to equip teams, students, and professionals with the digital skills they need to succeed in today's technology-driven world. 
+        </p>
+        <p class="text-lg text-gray-700">
+            Every service we offer is guided by a passion for innovation, excellence, and making a positive difference.
+        </p>
+    </section>
 
-<section id="services" class="services">
-    <h2 class="section-title">Our Services</h2>
-     <p>
-        At Passinove, we are committed to delivering a wide range of innovative and impactful services to help organizations and individuals embrace technology more effectively. 
-    </p>
-    <p>
-        We specialize in custom software development tailored to the unique needs of each client, ensuring efficient and scalable solutions. 
-        Our team also develops mobile and web applications that are user-friendly, responsive, and designed to solve real-world problems across various industries. 
-    </p>
-    <p>
-        In the education sector, we build and maintain powerful school platforms and reporting systems that streamline communication, improve record-keeping, and enhance learning experiences. 
-        Additionally, we offer expert-led tech training and consulting programs to equip teams, students, and professionals with the digital skills they need to succeed in today's technology-driven world. 
-    </p>
-    <p>
-        Every service we offer is guided by a passion for innovation, excellence, and making a positive difference.
-    </p>
-</section>
+    <section id="contact" class="bg-white my-10 rounded-xl py-10 px-10 shadow-lg max-w-6xl mx-auto">
+        <h2 class="text-4xl mb-8 text-center text-primary relative">
+            Contact Us
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mt-4"></div>
+        </h2>
+        <p class="text-lg text-gray-700 my-4 flex items-center">
+            <span class="text-primary-light font-bold mr-3">•</span> Email: contact@passinove.com
+        </p>
+        <p class="text-lg text-gray-700 my-4 flex items-center">
+            <span class="text-primary-light font-bold mr-3">•</span> Phone: +250 788 123 456
+        </p>
+        <p class="text-lg text-gray-700 my-4 flex items-center">
+            <span class="text-primary-light font-bold mr-3">•</span> Location: Kigali, Rwanda
+        </p>
+    </section>
 
-<section id="contact" class="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <p>Email: contact@passinove.com</p>
-    <p>Phone: +250 788 123 456</p>
-    <p>Location: Kigali, Rwanda</p>
-</section>
+    <footer class="bg-gradient-to-r from-primary to-primary-light text-white text-center py-8 mt-16">
+        <p class="m-0 text-base">&copy; {{ date('Y') }} Passinove. All rights reserved.</p>
+    </footer>
 
-<footer>
-    <p>&copy; {{ date('Y') }} Passinove. All rights reserved.</p>
-</footer>
-
+    <script>
+        
+        // the codes below will be showing the mobile navigation handling 
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('nav');
+            const links = document.querySelector('.links');
+            const auth = document.querySelector('.auth');
+            
+            function handleResize() {
+                if (window.innerWidth <= 768) {
+                    nav.classList.add('flex-col', 'py-4', 'px-4');
+                    links.classList.add('mt-4', 'flex-wrap', 'justify-center');
+                    auth.classList.add('mt-4');
+                    
+                    const navLinks = links.querySelectorAll('a');
+                    navLinks.forEach(link => {
+                        link.classList.add('mx-1', 'my-1');
+                    });
+                } else {
+                    nav.classList.remove('flex-col', 'py-4', 'px-4');
+                    links.classList.remove('mt-4', 'flex-wrap', 'justify-center');
+                    auth.classList.remove('mt-4');
+                    
+                    const navLinks = links.querySelectorAll('a');
+                    navLinks.forEach(link => {
+                        link.classList.remove('mx-1', 'my-1');
+                    });
+                }
+            }
+            
+           
+            handleResize();
+            
+           
+            window.addEventListener('resize', handleResize);
+        });
+    </script>
 </body>
 </html>
