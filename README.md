@@ -1,6 +1,6 @@
 Posinnove Authentication System
 
-This is a basic authentication system built with Laravel and Breeze. It includes user registration, login, and dashboard access. The UI has been customized to resemble the Posinnove platform and styled using custom Tailwind CSS.
+This project is a repeated implementation of an authentication system inspired by the original Posinnove platform. It has been recreated using Laravel and Breeze, including user registration, login, and dashboard access. The user interface has been customized to closely match the design of the Posinnove website and styled using custom Tailwind CSS.
 
 Features
 
@@ -23,9 +23,22 @@ Features
 
 1. Clone the Repository
 git clone https://github.com/Annitha/Auth_system.git
-cd posinnove-auth
+cd Auth_system
+
+2. Install independencies
+   
 composer install
 npm install
+
+3. Run migration
+   
 php artisan migrate
-php artisan serve
+
+4. Install laravel breeze if not yet installed
+
+ php artisan breeze:install blade
+ npm install && npm run dev
+
+ 5.Run Server
+ php artisan serve
 
