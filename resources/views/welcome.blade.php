@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Passinove</title>
+    <title>Posinnove</title>
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -55,7 +55,7 @@
     </nav>
 
     <section id="home" class="bg-gradient-to-r from-primary to-primary-light text-white text-center py-32 px-[5%]">
-        <h1 class="text-5xl font-bold mb-5">Welcome to Passinove</h1>
+        <h1 class="text-5xl font-bold mb-5">Welcome to Posinnove</h1>
         <p class="text-xl max-w-3xl mx-auto">Innovative software solutions for a better tomorrow</p>
     </section>
 
@@ -65,7 +65,7 @@
             <div class="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mt-4"></div>
         </h2>
         <p class="text-lg text-gray-700 mb-5">
-            Passinove is a tech innovation platform dedicated to creating smart digital solutions that transform business, education, and society.
+           Posinnove is a tech innovation platform dedicated to creating smart digital solutions that transform business, education, and society.
         </p>
     </section>
 
@@ -75,7 +75,7 @@
             <div class="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mt-4"></div>
         </h2>
         <p class="text-lg text-gray-700 mb-5">
-            At Passinove, we are committed to delivering a wide range of innovative and impactful services to help organizations and individuals embrace technology more effectively. 
+            At Posinnove, we are committed to delivering a wide range of innovative and impactful services to help organizations and individuals embrace technology more effectively. 
         </p>
         <p class="text-lg text-gray-700 mb-5">
             We specialize in custom software development tailored to the unique needs of each client, ensuring efficient and scalable solutions. 
@@ -96,23 +96,24 @@
             <div class="w-20 h-1 bg-gradient-to-r from-primary to-primary-light rounded-full mx-auto mt-4"></div>
         </h2>
         <p class="text-lg text-gray-700 my-4 flex items-center">
-            <span class="text-primary-light font-bold mr-3">•</span> Email: contact@passinove.com
+            <span class="text-primary-light font-bold mr-3"></span> Email: contact@posinnove.com
         </p>
         <p class="text-lg text-gray-700 my-4 flex items-center">
-            <span class="text-primary-light font-bold mr-3">•</span> Phone: +250 788 123 456
+            <span class="text-primary-light font-bold mr-3"></span> Phone: +250 788 123 456
         </p>
         <p class="text-lg text-gray-700 my-4 flex items-center">
-            <span class="text-primary-light font-bold mr-3">•</span> Location: Kigali, Rwanda
+            <span class="text-primary-light font-bold mr-3"></span> Location: Kigali, Rwanda
         </p>
     </section>
 
     <footer class="bg-gradient-to-r from-primary to-primary-light text-white text-center py-8 mt-16">
-        <p class="m-0 text-base">&copy; {{ date('Y') }} Passinove. All rights reserved.</p>
+        <p class="m-0 text-base">&copy; {{ date('Y') }} Posinnove. All rights reserved.</p>
     </footer>
 
     <script>
         
         // the codes below will be showing the mobile navigation handling 
+        
         document.addEventListener('DOMContentLoaded', function() {
             const nav = document.querySelector('nav');
             const links = document.querySelector('.links');
